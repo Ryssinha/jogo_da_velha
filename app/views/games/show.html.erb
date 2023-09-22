@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="game.css">
+</head>
+<body>
+  <div id="board">
+    <h1 id="game-title" class="animated-title">JOGO DA VELHA</h1>
+    <table>
+      <% @game.state.chars.each_with_index do |symbol, index| %>
+        <% if index % 3 == 0 %>
+          <tr>
+        <% end %>
+        <td class="cell <%= 'selected' if symbol != '-' %>" data-position="<%= index %>">
+          <%= symbol == '-' ? '' : symbol %>
+        </td>
+        <% if (index + 1) % 3 == 0 %>
+          </tr>
+        <% end %>
+      <% end %>
+    </table>
+  </div>
+
+  <div id="welcome-popup" class="popup">
+    <button id="close-popup" class="close-button">×</button>
+    <p>Bem-vindo ao Jogo da Velha! Vamos brincar?</p>
+  </div>
+
+  <div id="end-popup" class="popup">
+    <button id="close-end-popup" class="close-button">×</button>
+    <p id="end-message">Fim de jogo! O vencedor é: <span id="winner-symbol"></span></p>
+  </div>
+
+  <div id="velha-popup" class="popup">
+    <button id="close-velha-popup" class="close-button">×</button>
+    <p>Deu velha! O jogo empatou.</p>
+  </div>
+
+  <button id="restart-button">Reiniciar Jogo</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

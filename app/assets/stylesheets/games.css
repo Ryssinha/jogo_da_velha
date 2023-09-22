@@ -1,0 +1,99 @@
+/* Estilos para centralizar o tabuleiro */
+#board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Centralizar verticalmente o tabuleiro */
+  margin-top: 20px;
+}
+
+/* Estilos para o tabuleiro e células */
+table {
+  border-collapse: separate;
+  border-spacing: 5px;
+  border: 2px solid #333;
+  border-radius: 20px; /* Aumentar o raio para bordas mais arredondadas */
+  width: 400px; /* Aumentar o tamanho do tabuleiro */
+  height: 400px; /* Aumentar o tamanho do tabuleiro */
+}
+
+td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 24px;
+  border: 1px solid #333;
+  border-radius: 10px; /* Aumentar o raio para bordas mais arredondadas */
+}
+
+/* Estilos para o cabeçalho */
+#header {
+  background-color: blue;
+  padding: 20px 0;
+  text-align: center;
+}
+
+#game-title {
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  background-color: rgb(236, 139, 179);
+  padding: 20px;
+  margin: 50;
+  width: 90%; /* Largura total do cabeçalho */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(253, 2, 69, 0.5);
+}
+
+/* Adicionar animação de tamanho para o título */
+.animated-title.big {
+  font-size: 48px;
+}
+
+/* Estilos para o pop-up */
+.popup {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 182, 193, 0.9); /* Rosa claro com transparência */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Estilos para o botão "Reiniciar Jogo" */
+#restart-button {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 1300px;
+  background-color: #ff006f;
+  color: #fff;
+  border: none;
+  padding: 20px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#restart-button:hover {
+  background-color: #0056b3;
+}
+
